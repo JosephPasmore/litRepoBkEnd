@@ -29,8 +29,6 @@
             <artifactId>jersey-client</artifactId>
             <version>1.17</version>
         </dependency>
-    </dependencies>
-    <dependencies>
         <dependency>
             <groupId>com.cloudinary</groupId>
             <artifactId>cloudinary-http44</artifactId>

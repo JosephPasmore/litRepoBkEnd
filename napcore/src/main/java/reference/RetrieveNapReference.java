@@ -5,16 +5,15 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
-@Path("/hello")
+@Path("/service")
 public class RetrieveNapReference {
 
     @GET
     @Path("/{retrieveNaps}")
     public Response retrieveNaps() {
 
-        String output = "Welcome  Joseph : ";
+        String output = "Welcome  Joseph";
 
         return Response.status(200).entity(output).build();
-
     }
 }
