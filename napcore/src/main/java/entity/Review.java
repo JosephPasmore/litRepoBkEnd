@@ -1,6 +1,6 @@
 public class Review {
 
-    // All are set to final to make Person Immutable
+    // All are set to final to make Review Immutable
     private final int reviewId;
     private final int pictureId;
     private final int commentId;
@@ -12,7 +12,7 @@ public class Review {
     private final String uploadDateTime;
 
     // Constructor is private, so that only static
-    // PersonBuilder can initiate the Person class instance
+    // ReviewBuilder can initiate the Review class instance
     private Review(ReviewBuilder builder) {
         this.reviewId = builder.getReviewId();
         this.pictureId = builder.getPictureId();
@@ -110,7 +110,7 @@ public class Review {
             return this;
         }
 
-        // The only method to initiate Person class
+        // The only method to initiate Review class
         Review build () {
             return new Review(this);
         }
