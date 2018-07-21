@@ -1,6 +1,6 @@
-public class Review {
+public class WritableReview {
 
-    // All are set to final to make Review Immutable
+    // All are set to final to make writableReview Immutable
     private final int reviewId;
     private final int pictureId;
     private final int commentId;
@@ -12,8 +12,8 @@ public class Review {
     private final String uploadDateTime;
 
     // Constructor is private, so that only static
-    // ReviewBuilder can initiate the Review class instance
-    private Review(ReviewBuilder builder) {
+    // writableReviewBuilder can initiate the writableReview class instance
+    private WritableReview(WritableReviewBuilder builder) {
         this.reviewId = builder.getReviewId();
         this.pictureId = builder.getPictureId();
         this.commentId = builder.getCommentId();
@@ -62,7 +62,7 @@ public class Review {
         return uploadDateTime;
     }
 
-    public static class ReviewBuilder() {
+    public static class WritableReviewBuilder() {
 
         // Multiple Constructors for each member variable
         public ReviewBuilder withReviewId ( int reviewId){
@@ -111,9 +111,8 @@ public class Review {
         }
 
         // The only method to initiate Review class
-        public Review build () {
-            return new Review(this);
+        public WritableReview build () {
+            return new WritableReview(this);
         }
     }
 }
-
